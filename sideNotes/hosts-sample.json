@@ -1,0 +1,52 @@
+{
+  "status": "Online",
+  "diskAvailableSpace": "22.55GB",
+  "ram": "1.9GB",
+  "cpu": "X58-54",
+  "os": "Ubuntu 18.4",
+  "ipAddress": "192.168.1.1",
+  "uptime": {
+    "days": 24,
+    "hours": 5
+  },
+  "details": {
+    "detailsId": "1002",
+    "hostName": "Ahmed",
+    "cpuType": "Intel64",
+    "macAddress": "E4-AA-EA-64-4A-E4"
+  },
+  "osInfo": {
+    "name": "Microsoft Window 10 Pro",
+    "version": "10.0.19042",
+    "patch": "KB2693643",
+    "build": "19042",
+    "arch": "64-bit"
+  },
+  "cpuInfo": {
+    "model": "Intel(R) Core(TM) i3-1005G1",
+    "clockSpeed": 1190,
+    "cores": 2,
+    "type": 3
+  },
+  "windowsSecurityCenter": {
+    "antivirus": "Enable",
+    "firewall": "Enable",
+    "autoupdate": "Enable",
+    "wscs": "Enable",
+    "uac": "Enable"
+  },
+  "diskInfo": [
+    {
+      "diskNumber": 0,
+      "partitions": ["S", "E", "D"],
+      "totalSpace": "232GB",
+      "freeSpace": "53GB"
+    },
+    {
+      "diskNumber": 1,
+      "partitions": ["C", "F", "G"],
+      "totalSpace": "232GB",
+      "freeSpace": "53GB"
+    }
+  ]
+}

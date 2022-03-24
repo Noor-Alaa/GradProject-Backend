@@ -1,0 +1,35 @@
+requiring info
+
+host-info & host details:
+1-status online or offline where can i optain it
+2-physical memory is it representing the ram if so i need it in gp
+
+
+cpu-info :
+1-Type field is missed
+2-why is it an array
+
+disk_info :
+1-free space field is missed
+2-in the xd it's mentioning a partation name which is missed in the json only
+partation number available 
+3-is disk index represent disk number ?
+4-what is \\\\.\\?
+5-what is type used for in the website ?
+6-need disk info that mimic the real data that will be rendered on the website
+to include it in the model
+7-what is the maximum disk numbers can a single host have ?
+
+windows_security_center:
+1- does good means enabled and bad means disabled ?
+
+os_info
+1-Arch field not available
+2-patch is available but empty would it be empty in the real data ?
+
+proccesses
+1-is the parent represent the ppid ?
+2-the path in some cases is left blank would it be like that ?
+3-the user field check it later
+
+
