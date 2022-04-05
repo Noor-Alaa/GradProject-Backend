@@ -8,10 +8,7 @@ const DiskInfo = new mongoose.Schema({
 });
 
 const HostSchema = new mongoose.Schema({
-  status: {
-    type: String,
-    default: "Online",
-  },
+  status: String,
   diskAvailableSpace: {
     type: String,
     required: [true, "Please Provide Disk Available Space"],
@@ -118,6 +115,17 @@ const HostSchema = new mongoose.Schema({
     },
   },
   diskInfo: [DiskInfo],
+  updatedAt: {
+    type: Date,
+    default: new Date(),
+  },
+});
+
+HostSchema.pre("findOneAndUpdate", async function () {
+  updatedDoc = await this.model.findOne(this.getQuery());
+  console.log(updatedDoc);
+  updatedDoc.updatedAt = new Date();
+  await updatedDoc.save();
 });
 
 const Host = mongoose.model("Host", HostSchema);

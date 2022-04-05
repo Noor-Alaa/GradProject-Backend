@@ -12,6 +12,7 @@ const AppError = require("./helpers/appError");
 // const tourRouter = require('./routes/tourRoutes');
 const userRouter = require("./routes/userRoutes");
 const hostRouter = require("./routes/hostRoutes");
+const processesRouter = require("./routes/processesRoutes");
 // const reviewRouter = require('./routes/reviewRoutes');
 // const viewRouter = require('./routes/viewRoutes');
 
@@ -79,6 +80,7 @@ app.use((req, res, next) => {
 // app.use('/api/v1/tours', tourRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/hosts", hostRouter);
+app.use("/api/v1/processes", processesRouter);
 // app.use('/api/v1/reviews', reviewRouter);
 
 //handling undefined routes
