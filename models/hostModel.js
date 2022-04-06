@@ -1,58 +1,20 @@
 const mongoose = require("mongoose");
 
-const DiskInfo = new mongoose.Schema({
-  diskNumber: { type: Number, required: [true, "Please Provide diskNumber"] },
-  partitions: { type: [String], require: [true, "Please Provide partitions"] },
-  totalSpace: { type: String, required: [true, "Please Provide totalSpace"] },
-  freeSpace: { type: String, required: [true, "Please Provide freespace"] },
-});
-
 const HostSchema = new mongoose.Schema({
   status: String,
-  diskAvailableSpace: {
+  uuid: String,
+  memory: String,
+  hostName: {
     type: String,
-    required: [true, "Please Provide Disk Available Space"],
-  },
-  ram: {
-    type: String,
-    required: [true, "Please Provide RAM"],
-  },
-  cpu: {
-    type: String,
-    required: [true, "Please Provide CPU"],
-  },
-  os: {
-    type: String,
-    required: [true, "Please Provide RAM"],
-  },
-  ipAddress: {
-    type: String,
-    required: [true, "Please Provide RAM"],
+    required: [true, "Please Provide hostName"],
+    unique: true,
   },
   uptime: {
     days: String,
     hours: String,
+    minutes: String,
   },
-  details: {
-    detailsId: {
-      type: String,
-      required: [true, "Please Provide detailsId"],
-    },
-    hostName: {
-      type: String,
-      required: [true, "Please Provide hostName"],
-      unique: true,
-    },
-    cpuType: {
-      type: String,
-      required: [true, "Please Provide cpuType"],
-    },
-    macAddress: {
-      type: String,
-      required: [true, "Please Provide macAddress"],
-    },
-  },
-  osInfo: {
+  os_info: {
     name: {
       type: String,
       required: [true, "Please Provide name"],
@@ -60,10 +22,6 @@ const HostSchema = new mongoose.Schema({
     version: {
       type: String,
       required: [true, "Please Provide version"],
-    },
-    patch: {
-      type: String,
-      required: [true, "Please Provide patch"],
     },
     build: {
       type: String,
@@ -74,25 +32,21 @@ const HostSchema = new mongoose.Schema({
       required: [true, "Please Provide arch"],
     },
   },
-  cpuInfo: {
+  cpu_info: {
     model: {
       type: String,
       required: [true, "Please Provide model"],
     },
-    clockSpeed: {
+    current_clock_speed: {
       type: String,
       required: [true, "Please Provide clockSpeed"],
     },
-    cores: {
+    number_of_cores: {
       type: String,
       required: [true, "Please Provide cores"],
     },
-    type: {
-      type: String,
-      required: [true, "Please Provide type"],
-    },
   },
-  windowsSecurityCenter: {
+  windows_security_center: {
     antivirus: {
       type: String,
       required: [true, "Please Provide antivirus"],
@@ -105,16 +59,24 @@ const HostSchema = new mongoose.Schema({
       type: String,
       required: [true, "Please Provide autoupdate"],
     },
-    wscs: {
+    windows_security_center_service: {
       type: String,
       required: [true, "Please Provide wscs"],
     },
-    uac: {
+    user_account_control: {
       type: String,
       required: [true, "Please Provide uac"],
     },
   },
-  diskInfo: [DiskInfo],
+  disk_info: {
+    disk_index: String,
+    disk_size: String,
+    id: String,
+    number_of_partitions: String,
+    type: {
+      type: String,
+    },
+  },
   updatedAt: {
     type: Date,
     default: new Date(),

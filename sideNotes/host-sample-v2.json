@@ -1,0 +1,35 @@
+{
+  "uuid": "212155",
+  "memory": "1551515sad51s",
+  "hostName": "hostname",
+  "uptime": {
+    "days": "2",
+    "hours": "1",
+    "minutes": "30"
+  },
+  "os_info": {
+    "name": "Microsoft windows 10 pro",
+    "version": "10.0.1",
+    "build": "19041",
+    "arch": "64b-it"
+  },
+  "cpu_info": {
+    "model": "Intel R",
+    "current_clock_speed": "2494",
+    "number_of_cores": "2"
+  },
+  "windows_security_center": {
+    "antivirus": "Good",
+    "firewall": "Poor",
+    "autoupdate": "Good",
+    "windows_security_center_service": "Good",
+    "user_account_control": "Good"
+  },
+  "disk_info": {
+    "disk_index": "0",
+    "disk_size": "545121454",
+    "id": "PhysicalDrive0",
+    "number_of_partitions": "3",
+    "type": "SCSI"
+  }
+}
