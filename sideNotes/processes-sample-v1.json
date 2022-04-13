@@ -1,0 +1,21 @@
+{
+  "hosts": ["624dbb4d2a21c7cc24e145a7", "624c5b6a10d4cb2fcd2ba097"],
+  "data": [
+    {
+      "name": "osqueryi.exe",
+      "parent": "5068",
+      "path": "C:\\ProgramData\\chocolatey\\lib\\osquery\\osqueryi.exe",
+      "pid": "788",
+      "uid": "1001",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    },
+    {
+      "name": "dllhost.exe",
+      "parent": "820",
+      "path": "C:\\Windows\\System32\\dllhost.exe",
+      "pid": "1052",
+      "uid": "1001",
+      "hostid": "624c5b6a10d4cb2fcd2ba097"
+    }
+  ]
+}

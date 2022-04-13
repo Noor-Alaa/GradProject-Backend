@@ -16,7 +16,7 @@ const servicesSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please Provide a display_name"],
   },
-  hostId: {
+  hostid: {
     type: mongoose.SchemaTypes.ObjectId,
     ref: "Host",
     required: [true, "A processes must belong to a host"],

@@ -6,7 +6,7 @@ const processesSchema = new mongoose.Schema({
   parent: { type: Number, required: [true, "Please Provide a parent"] },
   pid: { type: Number, required: [true, "Please Provide a pid"] },
   uid: { type: Number, required: [true, "Please Provide a uid"] },
-  hostId: {
+  hostid: {
     type: mongoose.SchemaTypes.ObjectId,
     ref: "Host",
     required: [true, "A processes must belong to a host"],

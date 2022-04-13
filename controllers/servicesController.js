@@ -7,7 +7,7 @@ exports.createServices = catchAsync(async (req, res, next) => {
   let hostIds;
   if (req.body.hosts.length > 0) {
     hostIds = req.body.hosts.map(el => mongoose.Types.ObjectId(el));
-    const result = await Services.deleteMany({ hostId: { $in: hostIds } });
+    const result = await Services.deleteMany({ hostid: { $in: hostIds } });
     console.log(result);
   }
 
@@ -22,7 +22,7 @@ exports.createServices = catchAsync(async (req, res, next) => {
 
 exports.getHostServices = catchAsync(async (req, res, next) => {
   const hostServices = await Services.find({
-    hostId: mongoose.Types.ObjectId(req.params.hostId),
+    hostid: mongoose.Types.ObjectId(req.params.hostId),
   });
 
   if (hostServices.length === 0) {
