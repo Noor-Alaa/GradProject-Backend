@@ -14,6 +14,21 @@ const userRouter = require("./routes/userRoutes");
 const hostRouter = require("./routes/hostRoutes");
 const processesRouter = require("./routes/processesRoutes");
 const servicesRouter = require("./routes/servicesRoutes");
+const arpCacheRouter = require("./routes/arpCacheRoutes");
+const groupsRouter = require("./routes/groupsRoutes");
+const InstalledSoftwareRouter = require("./routes/installedSoftwareRoutes");
+const InterfaceAddressesRouter = require("./routes/InterfaceAddressesRoutes");
+const ListenPortsRouter = require("./routes/listenPortsRoutes");
+const LocalUsersRouter = require("./routes/localUsersRoutes");
+const RouteRouter = require("./routes/routeRoutes");
+const ScheduledTasksRouter = require("./routes/scheduledTasksRoutes");
+const SecurityPatchesRouter = require("./routes/securityPatchesRoutes");
+const SessionsRouter = require("./routes/sessionsRoutes");
+const UsersGroupsRouter = require("./routes/usersGroupsRoutes");
+const ApplicationEventRouter = require("./routes/applicationEventRoutes");
+const SystemEventRouter = require("./routes/systemEventRoutes");
+const SecurityEventsRouter = require("./routes/securityEventsRoutes");
+const PowershellEventsRouter = require("./routes/powershellEventsRoutes");
 // const reviewRouter = require('./routes/reviewRoutes');
 // const viewRouter = require('./routes/viewRoutes');
 
@@ -83,6 +98,22 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/hosts", hostRouter);
 app.use("/api/v1/processes", processesRouter);
 app.use("/api/v1/services", servicesRouter);
+app.use("/api/v1/arp", arpCacheRouter);
+app.use("/api/v1/groups", groupsRouter);
+app.use("/api/v1/installedSoftware", InstalledSoftwareRouter);
+app.use("/api/v1/interfaceAddresses", InterfaceAddressesRouter);
+app.use("/api/v1/listenPorts", ListenPortsRouter);
+app.use("/api/v1/localUsers", LocalUsersRouter);
+app.use("/api/v1/route", RouteRouter);
+app.use("/api/v1/secheduledTasks", ScheduledTasksRouter);
+app.use("/api/v1/securityPatches", SecurityPatchesRouter);
+app.use("/api/v1/sessions", SessionsRouter);
+app.use("/api/v1/usersGroups", UsersGroupsRouter);
+app.use("/api/v1/applicationEvent", ApplicationEventRouter);
+app.use("/api/v1/systemEvent", SystemEventRouter);
+app.use("/api/v1/securityEvents", SecurityEventsRouter);
+app.use("/api/v1/powershellEvents", PowershellEventsRouter);
+
 // app.use('/api/v1/reviews', reviewRouter);
 
 //handling undefined routes

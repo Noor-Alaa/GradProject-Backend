@@ -1,0 +1,23 @@
+{
+  "hosts": ["624dbb4d2a21c7cc24e145a7"],
+  "data": [
+    {
+      "channel": "System",
+      "data": "{\"EventData\":{\"HiveNameLength\":\"85\",\"HiveName\":\"\\\\??\\\\C:\\\\ProgramData\\\\Microsoft\\\\Provisioning\\\\Microsoft-Desktop-Provisioning-Sequence.dat\",\"KeysUpdated\":\"0\",\"DirtyPages\":\"0\"}}",
+      "datetime": "2022-03-19T16:25:34.2897501Z",
+      "eventid": "16",
+      "level": "4",
+      "pid": "4488",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    },
+    {
+      "channel": "System",
+      "data": "{\"EventData\":{\"NewTime\":\"2022-03-19T16:24:40.9907106Z\",\"OldTime\":\"2022-03-19T16:24:40.9895368Z\",\"Reason\":\"1\",\"ProcessName\":\"\\\\Device\\\\HarddiskVolume3\\\\Windows\\\\System32\\\\svchost.exe\",\"ProcessID\":\"6636\"}}",
+      "datetime": "2022-03-19T16:24:40.9914652Z",
+      "eventid": "1",
+      "level": "4",
+      "pid": "6636",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "hosts": ["624dbb4d2a21c7cc24e145a7"],
+  "data": [
+    {
+      "install_location": "C:\\Program Files\\VMware\\VMware Tools\\",
+      "name": "VMware Tools",
+      "publisher": "VMware, Inc.",
+      "version": "11.3.5.18557794",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    },
+    {
+      "install_location": "",
+      "name": "Microsoft Update Health Tools",
+      "publisher": "Microsoft Corporation",
+      "version": "2.84.0.0",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    }
+  ]
+}

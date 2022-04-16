@@ -1,0 +1,23 @@
+{
+  "hosts": ["624dbb4d2a21c7cc24e145a7"],
+  "data": [
+    {
+      "host": "",
+      "pid": "-1",
+      "registry_hive": "HKEY_USERS\\S-1-5-21-1789514257-658205144-1435693417-1001",
+      "time": "1647705545",
+      "type": "active",
+      "user": "sobhy",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    },
+    {
+      "host": "",
+      "pid": "-1",
+      "registry_hive": "HKEY_USERS\\S-1-5-21-1789514257-658205144-1435693417-1001",
+      "time": "1647705545",
+      "type": "active",
+      "user": "sobhy",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    }
+  ]
+}

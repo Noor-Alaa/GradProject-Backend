@@ -1,0 +1,17 @@
+{
+  "hosts": ["624dbb4d2a21c7cc24e145a7"],
+  "data": [
+    {
+      "name": "MicrosoftEdgeUpdateTaskMachineCore",
+      "path": "\\MicrosoftEdgeUpdateTaskMachineCore",
+      "state": "ready",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    },
+    {
+      "name": "MicrosoftEdgeUpdateTaskMachineUA",
+      "path": "\\MicrosoftEdgeUpdateTaskMachineUA",
+      "state": "ready",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    }
+  ]
+}

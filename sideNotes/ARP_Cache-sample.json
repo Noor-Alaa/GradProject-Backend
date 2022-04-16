@@ -1,0 +1,17 @@
+{
+  "hosts": ["624dbb4d2a21c7cc24e145a7"],
+  "data": [
+    {
+      "address": "255.255.255.255",
+      "interface": "00:0c:29:49:c7:f4",
+      "mac": "FF:FF:FF:FF:FF:FF",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    },
+    {
+      "address": "239.255.255.250",
+      "interface": "00:0c:29:49:c7:f4",
+      "mac": "01:00:5E:7F:FF:FA",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    }
+  ]
+}

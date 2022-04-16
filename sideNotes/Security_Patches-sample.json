@@ -1,0 +1,19 @@
+{
+  "hosts": ["624dbb4d2a21c7cc24e145a7"],
+  "data": [
+    {
+      "caption": "http://support.microsoft.com/?kbid=5006365",
+      "csname": "DESKTOP-AJ8FP9S",
+      "description": "Update",
+      "hotfix_id": "KB5006365",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    },
+    {
+      "caption": "http://support.microsoft.com/?kbid=4561600",
+      "csname": "DESKTOP-AJ8FP9S",
+      "description": "Security Update",
+      "hotfix_id": "KB4561600",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    }
+  ]
+}

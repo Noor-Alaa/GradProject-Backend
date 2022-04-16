@@ -1,0 +1,21 @@
+{
+  "hosts": ["624dbb4d2a21c7cc24e145a7"],
+  "data": [
+    {
+      "destination": "0.0.0.0",
+      "gateway": "192.168.173.2",
+      "interface": "192.168.173.130",
+      "netmask": "0",
+      "source": "",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    },
+    {
+      "destination": "127.0.0.0",
+      "gateway": "127.0.0.0",
+      "interface": "127.0.0.1",
+      "netmask": "8",
+      "source": "",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "hosts": ["624dbb4d2a21c7cc24e145a7"],
+  "data": [
+    {
+      "channel": "Security",
+      "data": "{\"EventData\":{\"SubjectUserSid\":\"S-1-5-21-1789514257-658205144-1435693417-1001\",\"SubjectUserName\":\"sobhy\",\"SubjectDomainName\":\"DESKTOP-AJ8FP9S\",\"SubjectLogonId\":\"0x3ca7e\",\"TargetName\":\"MicrosoftAccount:user=02dliqgoclsllyuf\",\"Type\":\"0\",\"CountOfCredentialsReturned\":\"0\",\"ReadOperation\":\"%%8100\",\"ReturnCode\":\"3221226021\",\"ProcessCreationTime\":\"2022-03-19T15:59:05.4484651Z\",\"ClientProcessId\":\"420\"}}",
+      "datetime": "2022-03-19T16:35:35.8882627Z",
+      "eventid": "5379",
+      "level": "0",
+      "pid": "728",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    },
+    {
+      "channel": "Security",
+      "data": "{\"EventData\":{\"SubjectUserSid\":\"S-1-5-21-1789514257-658205144-1435693417-1001\",\"SubjectUserName\":\"sobhy\",\"SubjectDomainName\":\"DESKTOP-AJ8FP9S\",\"SubjectLogonId\":\"0x3ca7e\",\"TargetName\":\"MicrosoftAccount:user=02dliqgoclsllyuf\",\"Type\":\"0\",\"CountOfCredentialsReturned\":\"0\",\"ReadOperation\":\"%%8100\",\"ReturnCode\":\"3221226021\",\"ProcessCreationTime\":\"2022-03-19T15:59:05.4484651Z\",\"ClientProcessId\":\"420\"}}",
+      "datetime": "2022-03-19T16:35:35.8881097Z",
+      "eventid": "5379",
+      "level": "0",
+      "pid": "728",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    }
+  ]
+}

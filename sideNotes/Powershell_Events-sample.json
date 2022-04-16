@@ -1,0 +1,35 @@
+{
+  "hosts": ["624dbb4d2a21c7cc24e145a7"],
+  "data": [
+    {
+      "LogName": "Microsoft-Windows-PowerShell/Operational",
+      "Id": 4104,
+      "ProcessId": 4580,
+      "UserId": {
+        "BinaryLength": 28,
+        "AccountDomainSid": "S-1-5-21-1789514257-658205144-1435693417",
+        "Value": "S-1-5-21-1789514257-658205144-1435693417-1001"
+      },
+      "LevelDisplayName": "Verbose",
+      "MachineName": "DESKTOP-AJ8FP9S",
+      "TimeCreated": "/Date(1647708866377)/",
+      "Message": "Creating Scriptblock text (1 of 1):\r\nprompt\r\n\r\nScriptBlock ID: 15ab8d5e-3a7e-473f-9828-74b77d304161\r\nPath: ",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    },
+    {
+      "LogName": "Microsoft-Windows-PowerShell/Operational",
+      "Id": 4104,
+      "ProcessId": 4580,
+      "UserId": {
+        "BinaryLength": 28,
+        "AccountDomainSid": "S-1-5-21-1789514257-658205144-1435693417",
+        "Value": "S-1-5-21-1789514257-658205144-1435693417-1001"
+      },
+      "LevelDisplayName": "Verbose",
+      "MachineName": "DESKTOP-AJ8FP9S",
+      "TimeCreated": "/Date(1647708866076)/",
+      "Message": "Creating Scriptblock text (1 of 1):\r\nGet-WinEvent \u0027Microsoft-Windows-PowerShell/Operational\u0027 -MaxEvents 10 | select logname,id,processid,userid,levelDisplayName,machinename,timecreated,message  |ConvertTo-Json\r\n\r\nScriptBlock ID: 9e919d35-7880-4dba-97ed-8eefa72734e0\r\nPath: ",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    }
+  ]
+}

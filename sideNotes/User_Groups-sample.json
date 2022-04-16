@@ -1,0 +1,15 @@
+{
+  "hosts": ["624dbb4d2a21c7cc24e145a7"],
+  "data": [
+    {
+      "gid": "544",
+      "uid": "500",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    },
+    {
+      "gid": "581",
+      "uid": "503",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    }
+  ]
+}

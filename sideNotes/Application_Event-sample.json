@@ -1,0 +1,23 @@
+{
+  "hosts": ["624dbb4d2a21c7cc24e145a7"],
+  "data": [
+    {
+      "channel": "Application",
+      "data": "{\"EventData\":[\"2022-03-20T16:39:22Z\",\"RulesEngine\"]}",
+      "datetime": "2022-03-19T16:40:22.3647703Z",
+      "eventid": "16384",
+      "level": "4",
+      "pid": "0",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    },
+    {
+      "channel": "Application",
+      "data": "{\"EventData\":[\"hr=0x803F7001\",\"RuleId=31e71c49-8da7-4a2f-ad92-45d98a1c79ba;Action=AutoActivate;AppId=55c92734-d682-4d71-983e-d6ec3f16059f;SkuId=4de7cb65-cdf1-4de9-8ae8-e3cce27b9f2c;NotificationInterval=1440;Trigger=NetworkAvailable\"]}",
+      "datetime": "2022-03-19T16:39:52.3334516Z",
+      "eventid": "8198",
+      "level": "2",
+      "pid": "0",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    }
+  ]
+}

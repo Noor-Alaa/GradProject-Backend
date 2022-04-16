@@ -1,0 +1,19 @@
+{
+  "hosts": ["624dbb4d2a21c7cc24e145a7"],
+  "data": [
+    {
+      "description": "Built-in account for administering the computer/domain",
+      "gid": "544",
+      "uid": "500",
+      "username": "Administrator",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    },
+    {
+      "description": "A user account managed by the system.",
+      "gid": "581",
+      "uid": "503",
+      "username": "DefaultAccount",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    }
+  ]
+}

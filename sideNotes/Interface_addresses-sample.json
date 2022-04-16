@@ -1,0 +1,17 @@
+{
+  "hosts": ["624dbb4d2a21c7cc24e145a7"],
+  "data": [
+    {
+      "address": "fe80::8dc0:c787:737f:de79",
+      "interface": "3",
+      "mask": "ffff:ffff:ffff:ffff::",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    },
+    {
+      "address": "::1",
+      "interface": "1",
+      "mask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+      "hostid": "624dbb4d2a21c7cc24e145a7"
+    }
+  ]
+}
