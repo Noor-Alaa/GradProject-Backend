@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const InstalledSoftwareSchema = new mongoose.Schema({
   install_location: {
     type: String,
-    required: [true, "Please Provide an install_location"],
   },
   name: { type: String, required: [true, "Please Provide a name"] },
   publisher: { type: String, required: [true, "Please Provide a publisher"] },
