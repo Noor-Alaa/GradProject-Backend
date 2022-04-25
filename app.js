@@ -60,7 +60,7 @@ app.use("/api", limiter);
 // app.use(express.json({ limit: "10kb" }));
 // app.use(express.urlencoded({ limit: "10kb", extended: false }));
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: false }));
 //Parse cookie , reading data from cookie into req.cookies
 app.use(cookieParser());
 
