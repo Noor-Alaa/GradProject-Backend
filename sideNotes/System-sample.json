@@ -1,0 +1,35 @@
+{
+  "hosts": ["6275017302b68828b1c8339d"],
+  "data": [
+    {
+      "id": 1014,
+      "machineName": "DESKTOP-5MU2AF7",
+      "TimeCreated": "2022-04-29 23:16:36",
+      "logName": "System",
+      "level": 3,
+      "processId": 1564,
+      "message": "Name resolution for the name wpad timed out after none of the configured DNS servers responded.",
+      "hostid": "6275017302b68828b1c8339d"
+    },
+    {
+      "id": 1,
+      "machineName": "DESKTOP-5MU2AF7",
+      "TimeCreated": "2022-04-29 23:06:13",
+      "logName": "System",
+      "level": 4,
+      "processId": 5416,
+      "message": "The system time has changed to ?2022?-?04?-?29T21:06:13.021190300Z from ?2022?-?04?-?29T21:06:13.021190300Z.\r\n\r\nChange Reason: System time adjusted to the new time zone.\r\nProcess: '\\Device\\HarddiskVolume3\\Windows\\ImmersiveControlPanel\\SystemSettings.exe' (PID 5416).",
+      "hostid": "6275017302b68828b1c8339d"
+    },
+    {
+      "id": 24,
+      "machineName": "DESKTOP-5MU2AF7",
+      "TimeCreated": "2022-04-29 23:06:13",
+      "logName": "System",
+      "level": 4,
+      "processId": 5416,
+      "message": "The time zone information was refreshed with exit reason 0. Current time zone bias is -120.",
+      "hostid": "6275017302b68828b1c8339d"
+    }
+  ]
+}

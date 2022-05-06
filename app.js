@@ -29,12 +29,27 @@ const ApplicationEventRouter = require("./routes/applicationEventRoutes");
 const SystemEventRouter = require("./routes/systemEventRoutes");
 const SecurityEventsRouter = require("./routes/securityEventsRoutes");
 const PowershellEventsRouter = require("./routes/powershellEventsRoutes");
+const ApplicationRouter = require("./routes/applicationRoutes");
+const SecurityRouter = require("./routes/securityRoutes");
+const SystemRouter = require("./routes/systemRoutes");
+const SysmonRouter = require("./routes/sysmonRoutes");
+
 // const reviewRouter = require('./routes/reviewRoutes');
 // const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
 
 //Global Middlewares
+app.use(function (req, res, next) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+  );
+
+  // Pass to next layer of middleware
+  next();
+});
 
 //Serving static files using express static engine
 app.use(express.static(`${__dirname}/public`));
@@ -115,6 +130,10 @@ app.use("/api/v1/applicationEvent", ApplicationEventRouter);
 app.use("/api/v1/systemEvent", SystemEventRouter);
 app.use("/api/v1/securityEvents", SecurityEventsRouter);
 app.use("/api/v1/powershellEvents", PowershellEventsRouter);
+app.use("/api/v1/application", ApplicationRouter);
+app.use("/api/v1/security", SecurityRouter);
+app.use("/api/v1/system", SystemRouter);
+app.use("/api/v1/sysmon", SysmonRouter);
 
 // app.use('/api/v1/reviews', reviewRouter);
 

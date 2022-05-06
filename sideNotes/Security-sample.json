@@ -1,0 +1,25 @@
+{
+  "hosts": ["6275017302b68828b1c8339d"],
+  "data": [
+    {
+      "id": 4798,
+      "machineName": "DESKTOP-5MU2AF7",
+      "TimeCreated": "2022-04-29 23:09:44",
+      "logName": "Security",
+      "level": 0,
+      "processId": 736,
+      "message": "A user's local group membership was enumerated.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-21-415461281-2325596237-2492616891-1001\r\n\tAccount Name:\t\tadmin\r\n\tAccount Domain:\t\tDESKTOP-5MU2AF7\r\n\tLogon ID:\t\t0x59798\r\n\r\nUser:\r\n\tSecurity ID:\t\tS-1-5-21-415461281-2325596237-2492616891-1001\r\n\tAccount Name:\t\tadmin\r\n\tAccount Domain:\t\tDESKTOP-5MU2AF7\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x10f0\r\n\tProcess Name:\t\tC:\\Windows\\explorer.exe",
+      "hostid": "6275017302b68828b1c8339d"
+    },
+    {
+      "id": 4616,
+      "machineName": "DESKTOP-5MU2AF7",
+      "TimeCreated": "2022-04-29 23:05:51",
+      "logName": "Security",
+      "level": 0,
+      "processId": 4,
+      "message": "The system time was changed.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-19\r\n\tAccount Name:\t\tLOCAL SERVICE\r\n\tAccount Domain:\t\tNT AUTHORITY\r\n\tLogon ID:\t\t0x3E5\r\n\r\nProcess Information:\r\n\tProcess ID:\t0x1b14\r\n\tName:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nPrevious Time:\t\t?2022?-?04?-?29T21:05:51.286976000Z\r\nNew Time:\t\t?2022?-?04?-?29T21:05:51.289917000Z\r\n\r\nThis event is generated when the system time is changed. It is normal for the Windows Time Service, which runs with System privilege, to change the system time on a regular basis. Other system time changes may be indicative of attempts to tamper with the computer.",
+      "hostid": "6275017302b68828b1c8339d"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "hosts": ["6275017302b68828b1c8339d"],
+  "data": [
+    {
+      "id": 16384,
+      "machineName": "DESKTOP-5MU2AF7",
+      "TimeCreated": "2022-04-29 22:55:48",
+      "logName": "Application",
+      "level": 4,
+      "processId": 0,
+      "message": "Successfully scheduled Software Protection service for re-start at 2022-04-30T20:53:48Z. Reason: RulesEngine.",
+      "hostid": "6275017302b68828b1c8339d"
+    },
+    {
+      "id": 8198,
+      "machineName": "DESKTOP-5MU2AF7",
+      "TimeCreated": "2022-04-29 22:54:51",
+      "logName": "Application",
+      "level": 2,
+      "processId": 0,
+      "message": "License Activation (slui.exe) failed with the following error code:\r\nhr=0x803F7001\r\nCommand-line arguments:\r\nRuleId=31e71c49-8da7-4a2f-ad92-45d98a1c79ba;Action=AutoActivate;AppId=55c92734-d682-4d71-983e-d6ec3f16059f;SkuId=4de7cb65-cdf1-4de9-8ae8-e3cce27b9f2c;NotificationInterval=1440;Trigger=NetworkAvailable",
+      "hostid": "6275017302b68828b1c8339d"
+    }
+  ]
+}
