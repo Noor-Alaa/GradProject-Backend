@@ -63,14 +63,14 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 // "guide@text.com"
-const limiter = rateLimit({
-  windowMs: 60 * 60 * 1000,
-  max: 100,
-  message: "Too many requests, try again after an hour",
-});
+// const limiter = rateLimit({
+//   windowMs: 60 * 60 * 1000,
+//   max: 100,
+//   message: "Too many requests, try again after an hour",
+// });
 
 //setting http requests limit using express rate limit
-app.use("/api", limiter);
+// app.use("/api", limiter);
 
 //Parse body ,reading data from body into req.body
 // app.use(express.json({ limit: "10kb" }));
