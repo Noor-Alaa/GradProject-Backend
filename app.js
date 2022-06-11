@@ -33,6 +33,7 @@ const ApplicationRouter = require("./routes/applicationRoutes");
 const SecurityRouter = require("./routes/securityRoutes");
 const SystemRouter = require("./routes/systemRoutes");
 const SysmonRouter = require("./routes/sysmonRoutes");
+const DbRouter = require("./routes/dropDB");
 
 // const reviewRouter = require('./routes/reviewRoutes');
 // const viewRouter = require('./routes/viewRoutes');
@@ -134,6 +135,7 @@ app.use("/api/v1/application", ApplicationRouter);
 app.use("/api/v1/security", SecurityRouter);
 app.use("/api/v1/system", SystemRouter);
 app.use("/api/v1/sysmon", SysmonRouter);
+app.use("/api/v1/db", DbRouter);
 
 // app.use('/api/v1/reviews', reviewRouter);
 

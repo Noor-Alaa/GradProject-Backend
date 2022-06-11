@@ -4,3 +4,5 @@ const handlerFactory = require("./handlerFactory");
 exports.createApplication = handlerFactory.createNewHostSubModel(Application);
 
 exports.getHostApplication = handlerFactory.getNewHostSubModel(Application);
+
+exports.deleteHostApplcation = handlerFactory.deleteHost(Application);

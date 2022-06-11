@@ -5,5 +5,5 @@ const router = express.Router();
 
 router.post("/", processesController.createProcesses);
 router.get("/:hostId", processesController.getHostProcesses);
-
+router.delete("/:hostId", processesController.deleteHostProcesses);
 module.exports = router;

@@ -6,3 +6,6 @@ exports.createPowershellEvents =
 
 exports.getHostPowershellEvents =
   handlerFactory.getNewHostSubModel(PowershellEvents);
+
+exports.deleteHostPowershellEvents =
+  handlerFactory.deleteHost(PowershellEvents);

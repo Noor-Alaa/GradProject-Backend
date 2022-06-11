@@ -4,3 +4,5 @@ const handlerFactory = require("./handlerFactory");
 exports.createListenPorts = handlerFactory.createNewHostSubModel(ListenPorts);
 
 exports.getHostListenPorts = handlerFactory.getNewHostSubModel(ListenPorts);
+
+exports.deleteHostListenPorts = handlerFactory.deleteHost(ListenPorts);

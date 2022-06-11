@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const catchAsync = require("../helpers/catchingAsyncErr");
 const AppError = require("../helpers/appError");
 const Processes = require("../models/processesModel");
+const handlerFactory = require("./handlerFactory");
 
 exports.createProcesses = catchAsync(async (req, res, next) => {
   let hostIds;
@@ -34,3 +35,5 @@ exports.getHostProcesses = catchAsync(async (req, res, next) => {
     hostProcesses,
   });
 });
+
+exports.deleteHostProcesses = handlerFactory.deleteHost(Processes);

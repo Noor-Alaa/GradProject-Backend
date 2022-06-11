@@ -4,3 +4,5 @@ const handlerFactory = require("./handlerFactory");
 exports.createSessions = handlerFactory.createNewHostSubModel(Sessions);
 
 exports.getHostSessions = handlerFactory.getNewHostSubModel(Sessions);
+
+exports.deleteHostSessions = handlerFactory.deleteHost(Sessions);

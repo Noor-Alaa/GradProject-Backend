@@ -5,5 +5,5 @@ const router = express.Router();
 
 router.post("/", securityController.createSecurity);
 router.get("/:hostId", securityController.getHostSecurity);
-
+router.delete("/:hostId", securityController.deleteHostSecurity);
 module.exports = router;

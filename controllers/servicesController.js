@@ -7,3 +7,5 @@ const handlerFactory = require("./handlerFactory");
 exports.createServices = handlerFactory.createNewHostSubModel(Services);
 
 exports.getHostServices = handlerFactory.getNewHostSubModel(Services);
+
+exports.deleteHostServices = handlerFactory.deleteHost(Services);

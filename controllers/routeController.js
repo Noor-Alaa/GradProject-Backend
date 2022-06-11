@@ -4,3 +4,5 @@ const handlerFactory = require("./handlerFactory");
 exports.createRoute = handlerFactory.createNewHostSubModel(Route);
 
 exports.getHostRoute = handlerFactory.getNewHostSubModel(Route);
+
+exports.deleteHostRoute = handlerFactory.deleteHost(Route);

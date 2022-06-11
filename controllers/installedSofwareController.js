@@ -6,3 +6,6 @@ exports.createInstalledSoftware =
 
 exports.getHostInstalledSoftware =
   handlerFactory.getNewHostSubModel(InstalledSoftware);
+
+exports.deleteHostInstalledSoftware =
+  handlerFactory.deleteHost(InstalledSoftware);

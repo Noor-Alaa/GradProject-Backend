@@ -6,3 +6,5 @@ exports.createSecurityEvents =
 
 exports.getHostSecurityEvents =
   handlerFactory.getNewHostSubModel(SecurityEvents);
+
+exports.deleteHostSecurityEvents = handlerFactory.deleteHost(SecurityEvents);

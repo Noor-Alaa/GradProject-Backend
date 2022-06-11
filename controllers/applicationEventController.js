@@ -6,3 +6,6 @@ exports.createApplicationEvent =
 
 exports.getHostApplicationEvent =
   handlerFactory.getNewHostSubModel(ApplicationEvent);
+
+exports.deleteHostApplicationEvent =
+  handlerFactory.deleteHost(ApplicationEvent);

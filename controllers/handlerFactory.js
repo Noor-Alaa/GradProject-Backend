@@ -115,11 +115,34 @@ exports.createNewHostSubModel = Model =>
     });
   });
 
+// exports.getNewHostSubModel = Model =>
+//   catchAsync(async (req, res, next) => {
+//     const data = await Model.find({
+//       hostid: mongoose.Types.ObjectId(req.params.hostId),
+//     });
+
+//     if (data.length === 0) {
+//       return next(new AppError("There is no such host", 404));
+//     }
+
+//     res.status(200).json({
+//       status: "Success",
+//       data,
+//     });
+//   });
+
 exports.getNewHostSubModel = Model =>
   catchAsync(async (req, res, next) => {
-    const data = await Model.find({
-      hostid: mongoose.Types.ObjectId(req.params.hostId),
-    });
+    // EXECUTE QUERY
+    const features = new APIFeatures(
+      Model.find({ hostid: mongoose.Types.ObjectId(req.params.hostId) }),
+      req.query
+    )
+      .filter()
+      .sort()
+      .limitFields()
+      .paginate();
+    const data = await features.query;
 
     if (data.length === 0) {
       return next(new AppError("There is no such host", 404));
@@ -127,6 +150,24 @@ exports.getNewHostSubModel = Model =>
 
     res.status(200).json({
       status: "Success",
+      results: data.length,
       data,
+    });
+  });
+
+exports.deleteHost = Model =>
+  catchAsync(async (req, res, next) => {
+    const doc = await Model.deleteMany({
+      hostid: mongoose.Types.ObjectId(req.params.hostId),
+    });
+
+    if (!doc) {
+      next(new AppError("There is no such document", 404));
+      return;
+    }
+
+    res.status(204).json({
+      status: "success",
+      data: null,
     });
   });

@@ -6,3 +6,5 @@ exports.createSecurityPatches =
 
 exports.getHostSecurityPatches =
   handlerFactory.getNewHostSubModel(SecurityPatches);
+
+exports.deleteHostSecurityPatches = handlerFactory.deleteHost(SecurityPatches);

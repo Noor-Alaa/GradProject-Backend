@@ -4,3 +4,5 @@ const handlerFactory = require("./handlerFactory");
 exports.createARPcache = handlerFactory.createNewHostSubModel(ARPcache);
 
 exports.getHostARPcache = handlerFactory.getNewHostSubModel(ARPcache);
+
+exports.deleteHostARPcache = handlerFactory.deleteHost(ARPcache);

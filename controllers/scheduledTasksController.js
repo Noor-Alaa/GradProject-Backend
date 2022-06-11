@@ -6,3 +6,5 @@ exports.createScheduledTasks =
 
 exports.getHostScheduledTasks =
   handlerFactory.getNewHostSubModel(ScheduledTasks);
+
+exports.deleteHostScheduledTasks = handlerFactory.deleteHost(ScheduledTasks);
