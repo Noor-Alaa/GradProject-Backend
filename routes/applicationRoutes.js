@@ -4,6 +4,7 @@ const applicationController = require("../controllers/applicationController");
 const router = express.Router();
 
 router.post("/", applicationController.createApplication);
+router.get("/", applicationController.getApplication);
 router.get("/:hostId", applicationController.getHostApplication);
 router.delete("/:hostId", applicationController.deleteHostApplcation);
 module.exports = router;

@@ -164,6 +164,8 @@ exports.getSysmonAlert = catchAsync(async (req, res, next) => {
   }
 
   console.log(user[0]);
+
+  console.log(alertData);
   res.status(200).json({
     status: "Success",
     data: {

@@ -21,19 +21,21 @@ exports.createProcesses = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getHostProcesses = catchAsync(async (req, res, next) => {
-  const hostProcesses = await Processes.find({
-    hostid: mongoose.Types.ObjectId(req.params.hostId),
-  });
+// exports.getHostProcesses = catchAsync(async (req, res, next) => {
+//   const hostProcesses = await Processes.find({
+//     hostid: mongoose.Types.ObjectId(req.params.hostId),
+//   });
 
-  if (hostProcesses.length === 0) {
-    return next(new AppError("There is no such host", 404));
-  }
+//   if (hostProcesses.length === 0) {
+//     return next(new AppError("There is no such host", 404));
+//   }
 
-  res.status(200).json({
-    status: "Success",
-    hostProcesses,
-  });
-});
+//   res.status(200).json({
+//     status: "Success",
+//     hostProcesses,
+//   });
+// });
+
+exports.getHostProcesses = handlerFactory.getNewHostSubModel(Processes);
 
 exports.deleteHostProcesses = handlerFactory.deleteHost(Processes);
