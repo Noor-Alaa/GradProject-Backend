@@ -1,6 +1,4 @@
-const mongoose = require("mongoose");
 const Sysmon = require("../models/sysmonModel");
-const Host = require("../models/hostModel");
 const handlerFactory = require("./handlerFactory");
 const catchAsync = require("../helpers/catchingAsyncErr");
 const AppError = require("../helpers/appError");
@@ -26,7 +24,7 @@ exports.getSysmonAlert = catchAsync(async (req, res, next) => {
   /** T1574 **/
   alertData = await Sysmon.find({
     Image: { $regex: "updater.exe" },
-    CommandLine: { $regex: "command exit" },
+    CommandLine: { $regex: "Command exit" },
   });
 
   responses = alertData.map(el => ({
@@ -46,7 +44,7 @@ exports.getSysmonAlert = catchAsync(async (req, res, next) => {
 
   /** T1197 **/
   alertData = await Sysmon.find({
-    Image: { $regex: "bitsamin.exe" },
+    Image: { $regex: "bitsadmin.exe" },
     CommandLine: { $regex: "create" },
   });
 
@@ -88,7 +86,7 @@ exports.getSysmonAlert = catchAsync(async (req, res, next) => {
 
   /** T1047 **/
   alertData = await Sysmon.find({
-    Image: { $regex: "wmic.exe" },
+    Image: { $regex: "WMIC.exe" },
     CommandLine: { $regex: "wmic" },
   });
 
@@ -191,7 +189,7 @@ exports.getSysmonAlert = catchAsync(async (req, res, next) => {
     totalAlerts = [...totalAlerts, ...responses];
   }
 
-  /** T1054 **/
+  /** T1562 **/
   alertData = await Sysmon.find({
     Image: { $regex: "fltmc.exe" },
     CommandLine: { $regex: "unload" },
@@ -200,7 +198,7 @@ exports.getSysmonAlert = catchAsync(async (req, res, next) => {
   responses = alertData.map(el => ({
     Tactic: "Defense Evasion",
     Technique: "Impair Defenses",
-    AttackID: "T1054",
+    AttackID: "T1562",
     Description:
       "An adversary may attempt to block indicators or events typically captured by sensors from being gathered and analyzed.",
     AlertTime: new Date(el.UtcTime).toLocaleString("en"),
@@ -368,171 +366,3 @@ exports.getSysmonAlert = catchAsync(async (req, res, next) => {
     },
   });
 });
-
-// exports.getSysmonAlert = catchAsync(async (req, res, next) => {
-//   // let data = await Sysmon.find();
-
-//   let alertData = [];
-//   let response = {};
-//   let responses = [];
-//   if (req.params.eventId === "T1054") {
-//     alertData = await Sysmon.find({
-//       Image: { $regex: "fltmc.exe" },
-//       CommandLine: { $regex: "unload" },
-//     });
-
-//     if (alertData.length === 0) {
-//       return next(new AppError("There is no such event", 404));
-//     }
-
-//     response = {
-//       Tactic: "Defense Evasion",
-//       Technique: "Impair Defenses",
-//       AttackID: "T1054",
-//       Description:
-//         "An adversary may attempt to block indicators or events typically captured by sensors from being gathered and analyzed.",
-//       AlertTime: new Date().toLocaleString("en"),
-//       HostName: alertData[0].User?.split("/")[0],
-//       User: alertData[0].User,
-//     };
-//   }
-
-//   if (req.params.eventId === "T1057") {
-//     alertData = await Sysmon.find({
-//       Image: { $regex: "tasklist.exe" },
-//       CommandLine: { $regex: "Get-Process" },
-//     });
-
-//     if (alertData.length === 0) {
-//       return next(new AppError("There is no such event", 404));
-//     }
-
-//     response = {
-//       Tactic: "Discovery, Execution",
-//       Technique: "Process Discovery",
-//       AttackID: "T1057",
-//       Description:
-//         "Adversaries may attempt to get information about running processes on a system.",
-//       AlertTime: new Date().toLocaleString("en"),
-//       HostName: alertData[0].User?.split("/")[0],
-//       User: alertData[0].User,
-//     };
-//   }
-
-//   if (req.params.eventId === "T1553") {
-//     alertData = await Sysmon.find({
-//       Image: { $regex: "certutil.exe" },
-//       CommandLine: { $regex: "-addstore" },
-//     });
-
-//     if (alertData.length === 0) {
-//       return next(new AppError("There is no such event", 404));
-//     }
-
-//     response = {
-//       Tactic: "Defense Evasion",
-//       Technique: "Subvert Trust Controls",
-//       AttackID: "T1553",
-//       Description:
-//         "Adversaries may undermine security controls that will either warn users of untrusted activity or prevent execution of untrusted programs.",
-//       AlertTime: new Date().toLocaleString("en"),
-//       HostName: alertData
-//         .map(el => el.User.split("/")[0])
-//         .filter((el, i, arr) => arr.indexOf(el) === i),
-//       User: alertData
-//         .map(el => el.User)
-//         .filter((el, i, arr) => arr.indexOf(el) === i),
-//     };
-
-//     responses = alertData.map(el => ({
-//       Tactic: "Defense Evasion",
-//       Technique: "Subvert Trust Controls",
-//       AttackID: "T1553",
-//       Description:
-//         "Adversaries may undermine security controls that will either warn users of untrusted activity or prevent execution of untrusted programs.",
-//       AlertTime: new Date(el.UtcTime).toLocaleString("en"),
-//       HostName: el.User.split("/")[0],
-//       User: el.User,
-//     }));
-//   }
-
-//   if (req.params.eventId === "T1218") {
-//     alertData = await Sysmon.find({
-//       Image: { $regex: "regsvr32.exe" },
-//       CommandLine: { $regex: "scrobj.dll" },
-//     });
-
-//     if (alertData.length === 0) {
-//       return next(new AppError("There is no such event", 404));
-//     }
-
-//     response = {
-//       Tactic: "Defense Evasion",
-//       Technique: "System Binary Proxy Execution",
-//       AttackID: "T1218",
-//       Description:
-//         "Adversaries may bypass process and/or signature-based defenses by proxying execution of malicious content with signed, or otherwise trusted, binaries.",
-//       AlertTime: new Date().toLocaleString("en"),
-//       HostName: alertData[0].User?.split("/")[0],
-//       User: alertData[0].User,
-//     };
-//   }
-
-//   if (req.params.eventId === "T1564") {
-//     alertData = await Sysmon.find({
-//       Image: {
-//         $regex: /powershell.exe|rundll32.exe|wmic.exe|wscript.exe|cscript.exe/,
-//       },
-//       CommandLine: { $regex: "some_regex" },
-//     });
-
-//     if (alertData.length === 0) {
-//       return next(new AppError("There is no such event", 404));
-//     }
-
-//     response = {
-//       Tactic: "Defense Evasion",
-//       Technique: "Hide Artifacts",
-//       AttackID: "T1564",
-//       Description:
-//         "Adversaries may attempt to hide artifacts associated with their behaviors to evade detection.",
-//       AlertTime: new Date().toLocaleString("en"),
-//       HostName: alertData[0].User?.split("/")[0],
-//       User: alertData[0].User,
-//     };
-//   }
-
-//   if (req.params.eventId === "T1548") {
-//     alertData = await Sysmon.find({
-//       Image: { $regex: "cmd.exe" },
-//       CommandLine: { $regex: "echo", $regex: "pipe" },
-//     });
-
-//     if (alertData.length === 0) {
-//       return next(new AppError("There is no such event", 404));
-//     }
-
-//     response = {
-//       Tactic: "Privilege Escalation, Defense Evasion",
-//       Technique: "Abuse Elevation Control Mechanism",
-//       AttackID: "T1548",
-//       Description:
-//         "Adversaries may circumvent mechanisms designed to control elevate privileges to gain higher-level permissions.",
-//       AlertTime: new Date().toLocaleString("en"),
-//       HostName: alertData[0].User?.split("/")[0],
-//       User: alertData[0].User,
-//     };
-//   }
-
-//   if (alertData.length === 0) {
-//     return next(new AppError("There is no such event", 404));
-//   }
-
-//   console.log(responses);
-//   res.status(200).json({
-//     status: "Success",
-//     data: {
-//       response,
-//     },
-//   });
-// });
