@@ -60,6 +60,8 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.use(cors());
+
 //Serving static files using express static engine
 app.use(express.static(`${__dirname}/public`));
 
