@@ -6,6 +6,7 @@ var xss = require("xss-clean");
 const hpp = require("hpp");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
+const cors = require("cors");
 
 const GlobalErrorHandler = require("./helpers/errorHandler");
 const AppError = require("./helpers/appError");
